@@ -14,7 +14,6 @@
 
 ## <h2 id="sobre"> Sobre </h2>
 
-------------------
 
 <br />
 - Pokemon Go (API) para consumo do banco de dados referente aos pokemons
@@ -24,8 +23,6 @@
 <br />
 
 ## <h2 id="documentacao"> Documentação API: </h2>
-
-------------------
 
 
 <table>
@@ -37,14 +34,13 @@
 </table>
  
 ## <h2 id="heroku"> Deploy (Heroku): </h2>
-------------------
 
  https://pokemongo-api.herokuapp.com/
 
 <br />
 
 ## <h2 id="desenvolvedor"> Desenvolvedor 🤖 </h2>
-------------------
+
 
 <table>
   <tr>
@@ -55,7 +51,7 @@
 <br />
 
 ## <h2 id="tecnologias"> Tecnologias utilizadas: 🖥️ </h2>
-------------------
+
 
 <br />
 
@@ -79,7 +75,7 @@
 
 ## <h2 id="funcionalidades"> Funcionalidades: </h2>
 
-------------------
+
 <br />
 
 * Retorna todos pokemons;
@@ -91,7 +87,7 @@
 
 ## <h2 id="testes"> Testes:
 
-------------------
+
 <br />
 
 ## teste de all (busca lista com todos pokemons)
@@ -116,7 +112,6 @@
 
 ## <h2 id="comousar"> Como usar </h2>
 
-------------------
 <br />
 
 Banco dados populado, deve ser consumido pelo postman seguindo a documentação <a href="#documentacao">AQUI</a> 
