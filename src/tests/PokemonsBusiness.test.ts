@@ -39,6 +39,7 @@ describe("teste de all", () => {
 
 
 describe("teste de page", () => {
+    
 
     test("Erro que deve retornar quando valor enviado for zero", async () => {
 
@@ -79,15 +80,16 @@ describe("teste de page", () => {
             expect.assertions(1)
         }
     })
+    
 
-    test("Erro que deve retornar quando página vier vázia", async () => {
+    test("Erro que deve retornar quando resposta da página vier vázia", async () => {
 
         try {
             const empt = 0
-            await pokemonsBusinessMock.page(10,2)
+            await pokemonsBusinessMock.page(10,100)
         } catch (e) {
             if (e instanceof Error) {
-                expect(e.message).toEqual("Nenhum pokemon nesta página")
+                expect(e.message).toEqual("Nenhum pokemon nesta página, ultima página com pokemons 9")
             }
         } finally {
             expect.assertions(1)
@@ -97,7 +99,7 @@ describe("teste de page", () => {
     
     test("Certo deve retornar quando resposta for correta", async () => {
         try {
-            const result = await pokemonsBusinessMock.page(1,2)
+            const result = await pokemonsBusinessMock.page(1,10)
             expect(result).toEqual(pokemonsListMock)
         } catch (e) {
             if (e instanceof Error) {
@@ -194,4 +196,5 @@ describe("teste de search", () => {
             expect.assertions(1)
         }
     })
+    
 })

@@ -68,8 +68,9 @@ export class PokemonsDatabase extends BaseDataBase {
 
    public async getPokemonsByPage(page:Number|any,pokemonsForPage:Number|any): Promise<void|any> {
       try {
+         let calcPage = (Number(page)-1) * Number(pokemonsForPage)
          const result = await BaseDataBase.connection.raw(`
-         SELECT * from ${this.tableName} LIMIT ${page-1}, ${pokemonsForPage};
+         SELECT * from ${this.tableName} LIMIT ${calcPage}, ${pokemonsForPage};
          `);
 
          return result[0].map((res: any) => {

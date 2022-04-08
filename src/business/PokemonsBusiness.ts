@@ -36,13 +36,15 @@ export class PokemonsBusiness {
 
          if (page <= 0 || pokemonsForPage <= 0 || !page || !pokemonsForPage) {
             throw new Error("Preencha todos os dados corretamente, valor enviado não pode ser 0 nem número negativo");
-
          } 
-
+         
+      
          const pokemons = await this.pokemonsDatabase.getPokemonsByPage(page, pokemonsForPage);
+         
+         const cal =  Math.ceil(820 / Number(pokemonsForPage) )
 
          if (!pokemons || pokemons.length === 0) {
-            throw new Error("Nenhum pokemon nesta página");
+            throw new Error("Nenhum pokemon nesta página, ultima página com pokemons "+cal);
          }
 
          return (pokemons);
